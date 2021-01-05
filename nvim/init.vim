@@ -6,7 +6,6 @@ syntax on
 filetype off
 filetype indent on
 
-set nocompatible
 set number
 set relativenumber
 set showcmd
