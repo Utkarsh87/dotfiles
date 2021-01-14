@@ -1,87 +1,31 @@
-" To install vim-plug:
-" curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
-" https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-syntax on
-filetype off
-filetype indent on
-
-set number
-set relativenumber
-set showcmd
-set cursorline
-set hlsearch
-set incsearch
-set wildmenu
-set lazyredraw
-set showmatch
-set updatetime=100
-set mouse=a
-set tabstop=4 softtabstop=4
-set shiftwidth=4
-set smartindent
-set showmode
-set expandtab
-set nowrap
-set smartcase
-set splitright
-set foldenable
-set nobackup
-set nowb
-set noswapfile
-
 call plug#begin('~/.config/nvim/plugged')
 
+" better syntax support
+Plug 'sheerun/vim-polyglot'
+" nerd tree file explorer
+Plug 'scrooloose/NERDTree'
+" auto complete brackets of all sorts
 Plug 'jiangmiao/auto-pairs'
+" gruvbox colorscheme
 Plug 'gruvbox-community/gruvbox'
 Plug 'sainnhe/gruvbox-material'
-Plug 'Yggdroot/indentLine'
-Plug 'preservim/nerdtree'
-Plug 'tpope/vim-surround'
-Plug 'itchyny/lightline.vim'
-
-Plug 'junegunn/fzf', { 'do': { ->fzf#install() } }
-Plug 'junegunn/fzf.vim'
-
-Plug 'preservim/nerdcommenter'
+" statusline
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+" commentary
+Plug 'tpope/vim-commentary'
+" git integration
+Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
+" for GBrowse
+Plug 'tpope/vim-rhubarb'
 
 call plug#end()
 
+source $HOME/.config/nvim/general/settings.vim
+source $HOME/.config/nvim/keys/mappings.vim
+source $HOME/.config/nvim/themes/airline.vim
+source $HOME/.config/nvim/themes/gruvbox.vim
 
-" Set gruvbox color scheme
-colorscheme gruvbox
-set background=dark
-hi Normal ctermbg=none
-let g:gruvbox_contrast_dark = 'hard'
-
-let mapleader=" "
-
-" ctrl-n for file tree toggle
-map <C-n> :NERDTreeFocus<CR>
-
-" Window splitting
-nnoremap <leader>v :vsp<CR>
-nnoremap <leader>h :sp<CR>
-nnoremap <leader>+ :vertical resize +5<CR>
-nnoremap <leader>- :vertical resize -5<CR>
-
-" switch between splits
-nnoremap <C-j> <C-W>j
-nnoremap <C-k> <C-W>k
-nnoremap <C-h> <C-W>h
-nnoremap <C-l> <C-W>l
-
-
-" Tab switching
-nnoremap <C-Left> :tabprevious<CR>
-nnoremap <C-Right> :tabnext<CR>
-
-" File finding
-nnoremap <leader>f :Files<CR>
-nnoremap <leader>g :GFiles<CR>
-
-" Enable autocompletion of commands
-set wildmode=longest,list,full
-" Disable auto commenting on newline
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+" TODO:
+" setup fzf
