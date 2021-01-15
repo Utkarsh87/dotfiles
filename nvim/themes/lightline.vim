@@ -1,3 +1,6 @@
 let g:lightline = {
-            \ 'colorscheme': 'seoul256',
+            \ 'colorscheme': 'powerline',
             \ }
+
+set noshowmode "don't show --INSERT-- etc anymore
+set laststatus=2
