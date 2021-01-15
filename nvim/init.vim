@@ -10,8 +10,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'gruvbox-community/gruvbox'
 Plug 'sainnhe/gruvbox-material'
 " statusline
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'itchyny/lightline.vim'
 " commentary
 Plug 'tpope/vim-commentary'
 " git integration
@@ -24,7 +23,7 @@ call plug#end()
 
 source $HOME/.config/nvim/general/settings.vim
 source $HOME/.config/nvim/keys/mappings.vim
-source $HOME/.config/nvim/themes/airline.vim
+source $HOME/.config/nvim/themes/lightline.vim
 source $HOME/.config/nvim/themes/gruvbox.vim
 
 " TODO:
