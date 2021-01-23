@@ -30,3 +30,7 @@ vnoremap <space>/ :Commentary<CR>
 
 " open file in github (GBrowse)
 nnoremap <leader>gh :GBrowse<CR>
+
+" add basic ranger config
+let g:rnvimr_ex_enable = 1
+nmap <leader>r :RnvimrToggle<CR>
