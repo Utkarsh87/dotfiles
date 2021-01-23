@@ -18,6 +18,8 @@ Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
 " for GBrowse
 Plug 'tpope/vim-rhubarb'
+" add ranger file explorer
+Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
 
 call plug#end()
 
